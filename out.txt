@@ -1,4 +1,0 @@
-AAA  BB CCC   D
-AAA   B  CC DDD
-  A CCC DDD
- AA  DD

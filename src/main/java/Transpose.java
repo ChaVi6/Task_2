@@ -92,9 +92,6 @@ public class Transpose {
 
     class TransposeMethods {
 
-    private ArrayList<String> line = new ArrayList<>();//Список для хранения текста в строках
-    private int max = 0;//Кол-во столбцов в самый длинной строчке
-
 
     public TransposeMethods(String file) throws IOException {
         Scanner sc = new Scanner(Paths.get(file));
@@ -103,11 +100,13 @@ public class Transpose {
 
 
     public TransposeMethods() {
-        System.out.println("Введите текст");
+        System.out.println("\n" + "Введите текст");
         Scanner sc = new Scanner(System.in);
         makeArrayOfWords(sc);
     }
 
+
+    private ArrayList<String> line = new ArrayList<>();
 
     private void makeArrayOfWords(Scanner sc) {
 
@@ -119,20 +118,21 @@ public class Transpose {
                 break;
         }
 
-        String[] massWords;//массив строк massWords
+        String[] words;
 
-        for (String value : list) {
-            massWords = value.split("\\s+");
-            if (massWords.length > max)
-                max = massWords.length;
-            for (String s : massWords) {
-                if (!s.equals(""))
+        for (String str : list) {
+            words = str.split("\\s+");
+            if (words.length > max)
+                max = words.length;
+            for (String s : words) {
+                if (s != null)
                     line.add(s);
             }
             line.add("\n");
         }
     }
 
+    private int max = 0;
 
     public void transpose() {
         ArrayList<String> newLine = new ArrayList<>();

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Tests" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-04-10T16:42:03" hostname="CHAVI" time="0.273">
+<testsuite name="Tests" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-04-10T17:09:56" hostname="CHAVI" time="0.167">
   <properties/>
-  <testcase name="test1()" classname="Tests" time="0.129"/>
-  <testcase name="test2()" classname="Tests" time="0.025"/>
-  <testcase name="test3()" classname="Tests" time="0.017"/>
-  <testcase name="test4()" classname="Tests" time="0.036"/>
-  <testcase name="test5()" classname="Tests" time="0.015"/>
-  <testcase name="test6()" classname="Tests" time="0.007"/>
-  <testcase name="test7()" classname="Tests" time="0.009"/>
-  <testcase name="test8()" classname="Tests" time="0.007"/>
-  <testcase name="test9()" classname="Tests" time="0.006"/>
+  <testcase name="test1()" classname="Tests" time="0.094"/>
+  <testcase name="test2()" classname="Tests" time="0.006"/>
+  <testcase name="test3()" classname="Tests" time="0.024"/>
+  <testcase name="test4()" classname="Tests" time="0.007"/>
+  <testcase name="test5()" classname="Tests" time="0.005"/>
+  <testcase name="test6()" classname="Tests" time="0.005"/>
+  <testcase name="test7()" classname="Tests" time="0.008"/>
+  <testcase name="test8()" classname="Tests" time="0.006"/>
+  <testcase name="test9()" classname="Tests" time="0.005"/>
   <system-out><![CDATA[AAA BB CCCC D
 AAAA B CC DDDD
 A CCC DDD
