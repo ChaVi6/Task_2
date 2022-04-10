@@ -1,4 +1,4 @@
-AA         AAAA       AAAA       AAA       
-BBBB       BBB        BBBBB      BBB       
-C          CC        
-D          D          D         
+ABBB ABCD  BAC    A
+DCDA BBBB CADA   BB
+ BBC ADCB ACAB  CCC
+ DDD

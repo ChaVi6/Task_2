@@ -16,20 +16,23 @@ import java.util.Scanner;
 
 public class Transpose {
 
-    @Argument(usage = "Input file name")
-    private String inputFileName;
-
-    @Option(name = "-o", usage = "Output file name")
-    private String outputFileName;
+    @Option (name = "transpose", usage = "transpose")
+    private boolean transpose;
 
     @Option(name = "-a", usage = "Maximum word length")
-    private int number = -1;
+    private int num = -1;
 
     @Option(name = "-t", usage = "Trim lines that are longer -a")
     private boolean trim;
 
     @Option(name = "-r", usage = "Align to the right edge")
     private boolean isRight;
+
+    @Option(name = "-o", usage = "Output file name")
+    private String ofile;
+
+    @Argument(usage = "Input file name")
+    private String file;
 
 
     public static void main(String[] args) throws IOException {
@@ -50,32 +53,35 @@ public class Transpose {
 
         TransposeMethods tr;
 
-        if (!Objects.equals(inputFileName, ""))
-            tr = new TransposeMethods(inputFileName);
-        else
+        if (file != null) {
+            tr = new TransposeMethods(file);
+        }
+        else {
             tr = new TransposeMethods();
+        }
+
 
 
         tr.transpose();
 
 
         if (trim) {
-            if (number == -1)
-                number = 10;
-            tr.cut(number);
+            if (num == -1)
+                num = 10;
+            tr.cut(num);
         }
 
 
         if (isRight) {
-            if (number == -1)
-                number = 10;
-            tr.right(number);
+            if (num == -1)
+                num = 10;
+            tr.right(num);
         } else
-            tr.left(number);
+            tr.left(num);
 
 
-        if (!outputFileName.equals(""))
-            tr.writeToFile(outputFileName);
+        if (ofile != null)
+            tr.writeToFile(ofile);
         else
             tr.writeToConsole();
     }
@@ -154,20 +160,20 @@ public class Transpose {
     }
 
 
-    public void left(int maxLenght) {
+    public void left(int lenght) {
         for (int i = 0; i < line.size(); i++)
             if (!line.get(i).equals("\n")) {
-                while (line.get(i).length() < maxLenght) {
+                while (line.get(i).length() < lenght) {
                     line.set(i, line.get(i) + " ");
                 }
             }
     }
 
 
-    public void right(int maxLenght) {
+    public void right(int lenght) {
         for (int i = 0; i < line.size(); i++)
             if (!line.get(i).equals("\n")) {
-                while (line.get(i).length() < maxLenght) {
+                while (line.get(i).length() < lenght) {
                     line.set(i, " " + line.get(i));
                 }
             }

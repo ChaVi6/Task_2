@@ -1,43 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Tests" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-04-10T12:15:47" hostname="CHAVI" time="0.156">
+<testsuite name="Tests" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-04-10T16:42:03" hostname="CHAVI" time="0.273">
   <properties/>
-  <testcase name="test1()" classname="Tests" time="0.048"/>
+  <testcase name="test1()" classname="Tests" time="0.129"/>
   <testcase name="test2()" classname="Tests" time="0.025"/>
-  <testcase name="test3()" classname="Tests" time="0.004"/>
-  <testcase name="test4()" classname="Tests" time="0.006"/>
-  <testcase name="test5()" classname="Tests" time="0.039"/>
-  <testcase name="test6()" classname="Tests" time="0.014"/>
-  <testcase name="test7()" classname="Tests" time="0.007"/>
-  <testcase name="test8()" classname="Tests" time="0.002"/>
-  <system-out><![CDATA[AA         AAAA       AAAA       AAA       
-BBBB       BBB        BBBBB      BBB       
-C          CC        
-D          D          D         
-left: true
-
-        AA       AAAA       AAAA        AAA
-      BBBB        BBB      BBBBB        BBB
-         C         CC
-         D          D          D
-right: true
-
-AA BBBB C D
-AAAA BBB CC D
-AAAA BBBBB D
-AAA BBB
+  <testcase name="test3()" classname="Tests" time="0.017"/>
+  <testcase name="test4()" classname="Tests" time="0.036"/>
+  <testcase name="test5()" classname="Tests" time="0.015"/>
+  <testcase name="test6()" classname="Tests" time="0.007"/>
+  <testcase name="test7()" classname="Tests" time="0.009"/>
+  <testcase name="test8()" classname="Tests" time="0.007"/>
+  <testcase name="test9()" classname="Tests" time="0.006"/>
+  <system-out><![CDATA[AAA BB CCCC D
+AAAA B CC DDDD
+A CCC DDD
+AA DD
 transpose: true
 
-AA AA AA AA
-BB BB BB BB
-C CC
-D D D
-cut: true
+AAA        BB         CCCC       D         
+AAAA       B          CC         DDDD      
+A          CCC        DDD       
+AA         DD        
+transpose and -t: true
+
+       AAA         BB       CCCC          D
+      AAAA          B         CC       DDDD
+         A        CCC        DDD
+        AA         DD
+transpose and -r: true
+
+AAA   BB    CCCC  D    
+AAAA  B     CC    DDDD 
+A     CCC   DDD  
+AA    DD   
+transpose and -a: true
+
+AA BB CC D 
+AA B  CC DD
+A  CC DD
+AA DD
+transpose, -a and -t: true
+
+AAA  BB CCC   D
+AAA   B  CC DDD
+  A CCC DDD
+ AA  DD
+transpose, -a, -t and -r: true
 
 all flags: true
 
-only -o: true
+mixed letters: true
 
-only -t: true
+real words: true
 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
