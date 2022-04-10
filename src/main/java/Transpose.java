@@ -61,7 +61,6 @@ public class Transpose {
         }
 
 
-
         tr.transpose();
 
 
@@ -100,13 +99,15 @@ public class Transpose {
 
 
     public TransposeMethods() {
-        System.out.println("\n" + "Введите текст");
+        System.out.println("\n" + "Введите текст:\n" + "(Воспользуйтесь Ctrl + d для завершения ввода)");
         Scanner sc = new Scanner(System.in);
         makeArrayOfWords(sc);
     }
 
 
     private ArrayList<String> line = new ArrayList<>();
+
+    private int max = 0;
 
     private void makeArrayOfWords(Scanner sc) {
 
@@ -122,17 +123,18 @@ public class Transpose {
 
         for (String str : list) {
             words = str.split("\\s+");
-            if (words.length > max)
+            if (words.length > max) {
                 max = words.length;
+            }
             for (String s : words) {
-                if (s != null)
+                if (s != null) {
                     line.add(s);
+                }
             }
             line.add("\n");
         }
     }
 
-    private int max = 0;
 
     public void transpose() {
         ArrayList<String> newLine = new ArrayList<>();
@@ -140,8 +142,9 @@ public class Transpose {
         for (int i = 0; i < max; i++) {
             for (int j = 0; j <= (line.size()-1); j++) {
                 if (line.get(j).equals("\n")) {
-                    if ((i + x) < j)
+                    if ((i + x) < j) {
                         newLine.add(line.get(i + x));
+                    }
                     x = j + 1;
                 }
             }
@@ -154,8 +157,9 @@ public class Transpose {
 
     public void cut(int number) {
         for (int i = 0; i < line.size(); i++) {
-            if (line.get(i).length() > number && !line.get(i).equals("\n"))
+            if (line.get(i).length() > number && !line.get(i).equals("\n")) {
                 line.set(i, line.get(i).substring(0, number));
+            }
         }
     }
 
